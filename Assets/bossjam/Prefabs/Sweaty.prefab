@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 114714853063420980}
   - component: {fileID: 114688111001902016}
   m_Layer: 0
-  m_Name: Character Blue 1
+  m_Name: Sweaty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
