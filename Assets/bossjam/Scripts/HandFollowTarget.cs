@@ -23,7 +23,7 @@ public class HandFollowTarget : MonoBehaviour {
     {
 
         Vector3 diff = target.position - transform.position + rigidbody.velocity*leadTime;
-        Debug.Log(diff);
+ 
         if(diff.magnitude > minDiff)
         {
             rigidbody.AddForce(diff * force * Time.deltaTime, ForceMode.Impulse);
