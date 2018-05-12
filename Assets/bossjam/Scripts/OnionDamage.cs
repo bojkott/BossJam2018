@@ -2,47 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Megaphone : MonoBehaviour {
+public class OnionDamage : MonoBehaviour {
 
     public float force = 10;
     public float damage = 0.1f;
-    Resource resource;
-    public ParticleSystem particles;
     public LayerMask canAttack;
-    bool cooldown = false;
-    float cooldownTimer = 0.5f;
+    Resource resource;
     List<int> hitObjects = new List<int>();
-    // Use this for initialization
-    void Start () {
-        resource = GetComponentInParent<Resource>();
-
-    }
+	// Use this for initialization
+	void Start () {
+        resource = GameObject.FindGameObjectWithTag("Teary").GetComponent<Resource>();
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    void ResetCooldown()
-    {
-        cooldown = false;
-    }
-    void StartCooldown()
-    {
-        cooldown = true;
-        Invoke("ResetCooldown", cooldownTimer);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (((1 << other.gameObject.layer) & canAttack) != 0)
+        if(((1 << other.gameObject.layer) & canAttack) != 0)
         {
-            if (!hitObjects.Contains(other.gameObject.layer))
+            if(!hitObjects.Contains(other.gameObject.layer))
             {
                 Resource otherResource = other.gameObject.GetComponentInParent<Resource>();
                 if (!otherResource.IsDead())
                 {
-                    otherResource.RemovePoints(damage, LayerMask.NameToLayer("SweatyCharacter"));
+                    otherResource.RemovePoints(damage, LayerMask.NameToLayer("TearyCharacter"));
                     resource.AddPoints(damage);
                     hitObjects.Add(other.gameObject.layer);
                 }
