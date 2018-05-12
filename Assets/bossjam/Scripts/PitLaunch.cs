@@ -5,7 +5,6 @@ using UnityEngine;
 public class PitLaunch : MonoBehaviour {
 
     bool isAscending;
-    bool isCollidingWithCharacter;
     float ascendSpeed;
     float delay;
     float charged;
@@ -17,7 +16,6 @@ public class PitLaunch : MonoBehaviour {
 	void Start ()
     {
         isAscending = false;
-        isCollidingWithCharacter = false;
         ascendSpeed = 16.0f;
         delay = 2.0f;
         charged = 0.0f;
@@ -56,109 +54,35 @@ public class PitLaunch : MonoBehaviour {
                 transform.SetPositionAndRotation(newPos, transform.rotation);
             }
         }
-
-        // Begin charging launch pad if the delay time is not achieved, otherwise begin ascending
-        //if (isCollidingWithCharacter)
-        //{
-        //    charged += Time.deltaTime;
-        //    if (charged < delay)
-        //    {
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        charged = 0.0f;
-        //        isCollidingWithCharacter = false;
-        //        isAscending = true;
-        //    }
-        //}
-	}
+    }
 
     void OnCollisionEnter(Collision col)
     {
         if (timeElapsed > cooldown)
         {
-            //isCollidingWithCharacter = true;
             isAscending = true;
 
-            //Rigidbody chestRigidbody;
+            GameObject gameObject = col.gameObject;
+            while (true)
+            {
+                if (gameObject.name == "Chest")
+                {
+                    break;
+                }
+                gameObject = gameObject.transform.parent.gameObject;
+            }
 
-            //Debug.Log(col.gameObject);
+            Rigidbody chestRigidbody = gameObject.GetComponent<Rigidbody>();
 
-            //GameObject gameObject = col.gameObject;
-            //while (true)
-            //{
-            //    if (gameObject.tag == "Character")
-            //    {
-            //    }
-            //    gameObject = gameObject.transform.parent.gameObject;
-            //}
+            // Apply force to chest
+            gameObject.transform.parent.gameObject.GetComponent<CharacterMovement>().EnableRagDoll(0.2f);
+            Vector3 force;
+            force.x = 0;
+            force.y = 200;
+            force.z = 0;
+            chestRigidbody.AddForce(force, ForceMode.VelocityChange);
 
-
-            //if (col.gameObject.name == "Chest")
-            //{
-            //    // The chest was the colliding object
-            //    chestRigidbody = col.gameObject.GetComponent<Rigidbody>();
-            //}
-            //else
-            //{
-            //    ConfigurableJoint joint = col.gameObject.GetComponent<ConfigurableJoint>();
-
-                
-            //    // Switch joint until chest is reached
-            //    while (true)
-            //    {
-            //        if (joint.connectedBody.gameObject.name == "Chest")
-            //        {
-            //            chestRigidbody = joint.connectedBody;
-            //            break;
-            //        }
-
-            //        joint = joint.connectedBody.gameObject.GetComponent<ConfigurableJoint>();
-            //    }
-            //}
-
-            //// Apply force to chest
-            //Vector3 force;
-            //force.x = 0; force.y = 250; force.z = 0;
-            //chestRigidbody.AddForce(force, ForceMode.VelocityChange);
-
-            //timeElapsed = 0.0f;
+            timeElapsed = 0.0f;
         }
-
-       
-
-        //if (col.gameObject.name == "SweatyCharacter")
-        //{
-        //    Transform transform = this.gameObject.GetComponent<Transform>();
-        //    Vector3 newPos;
-        //    newPos.x = transform.position.x;
-        //    newPos.y = transform.position.y + 10;
-        //    newPos.z = transform.position.z;
-        //
-        //    transform.SetPositionAndRotation(newPos, transform.rotation);
-        //}
-        //
-        //if (col.gameObject.layer == 12 /*"SweatyCharacter"*/)
-        //{
-        //    Transform transform = this.gameObject.GetComponent<Transform>();
-        //    Vector3 newPos;
-        //    newPos.x = transform.position.x;
-        //    newPos.y = transform.position.y + 10;
-        //    newPos.z = transform.position.z;
-        //
-        //    transform.SetPositionAndRotation(newPos, transform.rotation);
-        //}
-        //
-        //if (col.gameObject.tag == "SweatyCharacter")
-        //{
-        //    Transform transform = this.gameObject.GetComponent<Transform>();
-        //    Vector3 newPos;
-        //    newPos.x = transform.position.x;
-        //    newPos.y = transform.position.y + 10;
-        //    newPos.z = transform.position.z;
-        //
-        //    transform.SetPositionAndRotation(newPos, transform.rotation);
-        //}
     }
 }
