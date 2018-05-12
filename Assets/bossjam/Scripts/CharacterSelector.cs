@@ -10,8 +10,8 @@ public class CharacterSelector : MonoBehaviour
     private float[] characterPostions;
     private int index = 1;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         characterPostions = new float[3] {213.9f, 216.801f, 219.349f };
     }
@@ -44,6 +44,10 @@ public class CharacterSelector : MonoBehaviour
                     clonedObject.transform.position = new Vector3(characterPostions[index], clonedObject.transform.position.y, clonedObject.transform.position.z);
                 }
             }
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                //Character selection goes here...
+            }     
         }
     }
 }
