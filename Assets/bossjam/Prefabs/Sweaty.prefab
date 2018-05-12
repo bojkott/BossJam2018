@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 114224261230775956}
   m_Layer: 12
   m_Name: Sweaty
-  m_TagString: Character
+  m_TagString: Sweaty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1856,7 +1856,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1850862724567952}
   m_LocalRotation: {x: -0.00031353795, y: 0.9999974, z: 0.0022946023, w: -0.000012919307}
-  m_LocalPosition: {x: 0.04, y: 0.94, z: 3.72}
+  m_LocalPosition: {x: 0, y: 0.83, z: 3.72}
   m_LocalScale: {x: 1.3909649, y: 2.0909064, z: 2.6806545}
   m_Children: []
   m_Father: {fileID: 4559922456215536}
