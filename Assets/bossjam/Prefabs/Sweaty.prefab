@@ -621,6 +621,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1483967236754476
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4675515484353044}
+  m_Layer: 12
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1499372044024204
 GameObject:
   m_ObjectHideFlags: 1
@@ -899,6 +914,21 @@ GameObject:
   - component: {fileID: 4549128106154678}
   m_Layer: 12
   m_Name: Right hand target (Sweaty)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1704282285139278
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4099474290706110}
+  m_Layer: 12
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,6 +1537,19 @@ Transform:
   m_Father: {fileID: 4874572365037734}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4099474290706110
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704282285139278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4822434033650580}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4106527570087538
 Transform:
   m_ObjectHideFlags: 1
@@ -1624,6 +1667,7 @@ Transform:
   m_LocalScale: {x: 0.17941202, y: 0.17941202, z: 0.17941202}
   m_Children:
   - {fileID: 4720141638697484}
+  - {fileID: 4675515484353044}
   m_Father: {fileID: 4166890101984916}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2241,6 +2285,19 @@ Transform:
   m_Father: {fileID: 4874572365037734}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!4 &4675515484353044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483967236754476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4144509174654394}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4705677149142248
 Transform:
   m_ObjectHideFlags: 1
@@ -2343,6 +2400,7 @@ Transform:
   m_LocalScale: {x: 0.17941202, y: 0.17941202, z: 0.17941202}
   m_Children:
   - {fileID: 4436184979091160}
+  - {fileID: 4099474290706110}
   m_Father: {fileID: 4166890101984916}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5996,7 +6054,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
-  offset: {fileID: 0}
+  offset: {fileID: 4099474290706110}
 --- !u!114 &114189445941538220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6024,12 +6082,12 @@ MonoBehaviour:
   - {fileID: 114170687712575196}
   - {fileID: 114534703980041200}
   chestBody: {fileID: 54549146861688252}
-  legRate: 0.4
-  legRateIncreaseByVelocity: 0.1
+  legRate: 0.35
+  legRateIncreaseByVelocity: 0.15
   liftForce: 80
   holdDownForce: 200
-  moveForwardForce: 30
-  inFrontVelocityM: 0.4
+  moveForwardForce: 75
+  inFrontVelocityM: 0.8
   chestBendDownForce: 0
   walking: 0
 --- !u!114 &114205266254991334
@@ -6093,7 +6151,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
-  offset: {fileID: 0}
+  offset: {fileID: 4675515484353044}
 --- !u!114 &114588960696888498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6161,8 +6219,8 @@ MonoBehaviour:
   - {fileID: 54692851537122748}
   maintainHeightStanding: 1
   maintainHeightCrouching: 0.6
-  jumpDelay: 0.4
-  airTimeDelay: 2
+  jumpDelay: 0.1
+  airTimeDelay: 0.5
   jumpForce: 50
   jumpForwardForce: 15
   facePlantForce: 30

@@ -61,6 +61,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1044423384318594
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4969977558057224}
+  m_Layer: 14
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1055601088986200
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +825,21 @@ GameObject:
   - component: {fileID: 65954208745473252}
   m_Layer: 14
   m_Name: Cube (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1440951705974584
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4425538504727848}
+  m_Layer: 14
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,7 +1823,8 @@ Transform:
   m_LocalRotation: {x: -0.08952726, y: -0.68857306, z: -0.15263554, w: -0.70324564}
   m_LocalPosition: {x: -1.2895436, y: 0.19265217, z: -0.52512336}
   m_LocalScale: {x: 0.17941202, y: 0.17941202, z: 0.17941202}
-  m_Children: []
+  m_Children:
+  - {fileID: 4969977558057224}
   m_Father: {fileID: 4355638654421204}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2250,6 +2281,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4196445510971354}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4425538504727848
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440951705974584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4793604734569098}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4431243669441962
 Transform:
@@ -2746,7 +2790,8 @@ Transform:
   m_LocalRotation: {x: 0.08834105, y: -0.5284424, z: -0.25815845, w: -0.80392706}
   m_LocalPosition: {x: -1.2244477, y: 0.18681754, z: -0.059494734}
   m_LocalScale: {x: 0.17941202, y: 0.17941202, z: 0.17941202}
-  m_Children: []
+  m_Children:
+  - {fileID: 4425538504727848}
   m_Father: {fileID: 4355638654421204}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2945,6 +2990,19 @@ Transform:
   m_Father: {fileID: 4025091181220672}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -225, z: -90.00001}
+--- !u!4 &4969977558057224
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044423384318594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4064002350053056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20449333364961100
 Camera:
   m_ObjectHideFlags: 1
@@ -7211,8 +7269,8 @@ MonoBehaviour:
   - {fileID: 54502090755975160}
   maintainHeightStanding: 1
   maintainHeightCrouching: 0.6
-  jumpDelay: 0.4
-  airTimeDelay: 2
+  jumpDelay: 0.1
+  airTimeDelay: 0.5
   jumpForce: 50
   jumpForwardForce: 15
   facePlantForce: 30
@@ -7298,12 +7356,12 @@ MonoBehaviour:
   - {fileID: 114892600356348024}
   - {fileID: 114392412152438136}
   chestBody: {fileID: 54858762457777508}
-  legRate: 0.4
-  legRateIncreaseByVelocity: 0.1
+  legRate: 0.35
+  legRateIncreaseByVelocity: 0.15
   liftForce: 80
   holdDownForce: 200
-  moveForwardForce: 30
-  inFrontVelocityM: 0.4
+  moveForwardForce: 75
+  inFrontVelocityM: 0.8
   chestBendDownForce: 0
   walking: 0
 --- !u!114 &114392412152438136
@@ -7321,7 +7379,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
-  offset: {fileID: 0}
+  offset: {fileID: 4425538504727848}
 --- !u!114 &114413711876751206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7471,7 +7529,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
-  offset: {fileID: 0}
+  offset: {fileID: 4969977558057224}
 --- !u!114 &114923897167286656
 MonoBehaviour:
   m_ObjectHideFlags: 1
