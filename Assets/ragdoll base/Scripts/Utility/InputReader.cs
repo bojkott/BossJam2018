@@ -57,6 +57,11 @@ public class InputReader : MonoBehaviour
             GetKeyboard2Input(ref up, ref down, ref left, ref right, ref fire, ref jump, ref dash, ref special);
             GetXBoxControllerInput("_2", ref up, ref down, ref left, ref right, ref fire, ref jump, ref dash, ref special);
         }
+        if (controllerNum == 2)
+        {
+            GetKeyboard2Input(ref up, ref down, ref left, ref right, ref fire, ref jump, ref dash, ref special);
+            GetXBoxControllerInput("_3", ref up, ref down, ref left, ref right, ref fire, ref jump, ref dash, ref special);
+        }
         // 
     }
     //
