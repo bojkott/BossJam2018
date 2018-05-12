@@ -43,6 +43,12 @@ public class Machete : MonoBehaviour {
                 resource.AddPoints(damage);
                 particles.Play();
                 StartCooldown();
+                AudioSource[] AS = gameObject.GetComponents<AudioSource>();
+                foreach (var a in AS)
+                {
+                    if (!a.isPlaying && a.name == "Audio Source (Splash)")
+                        a.Play();
+                }
             }
             
 

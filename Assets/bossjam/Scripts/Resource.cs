@@ -6,7 +6,7 @@ public class Resource : MonoBehaviour {
     [SerializeField]
     public float points = 1.0f;
     public float tick = 0.02f;
-    public GameObject Tears;
+    public GameObject Tears; 
     public GameObject Sweat;
     CharacterMovement cm;
 	// Use this for initialization
@@ -37,7 +37,7 @@ public class Resource : MonoBehaviour {
         {
             ps.Play();
         }
-        AudioSource AS = Tears.GetComponent<AudioSource>();
+        AudioSource AS = Tears.GetComponentInChildren<AudioSource>();
         if (!AS.isPlaying)
             AS.Play();
     }
@@ -48,7 +48,7 @@ public class Resource : MonoBehaviour {
         {
             ps.Play();
         }
-        AudioSource AS = Sweat.GetComponent<AudioSource>();
+        AudioSource AS = Sweat.GetComponentInChildren<AudioSource>();
         if (!AS.isPlaying)
             AS.Play();
     }

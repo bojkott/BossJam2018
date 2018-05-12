@@ -24,7 +24,16 @@ public class BloodyAttack : MonoBehaviour {
         {
             attack.SetTrigger("attack");
             Invoke("resetAttack", 1);
-            
+
+            AudioSource[] AS = gameObject.GetComponentsInChildren<AudioSource>();
+            if (AS != null)
+            {
+                foreach (var a in AS)
+                {
+                    if (!a.isPlaying && a.name == "Audio Source (Swing)")
+                        a.Play();
+                }
+            }
         }
 	}
 
