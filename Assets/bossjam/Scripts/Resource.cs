@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour {
     [SerializeField]
-    private float points = 1.0f;
+    public float points = 1.0f;
 
     public GameObject Tears;
+    public GameObject Sweat;
     CharacterMovement cm;
 	// Use this for initialization
 	void Start () {
@@ -36,20 +37,43 @@ public class Resource : MonoBehaviour {
         }
     }
 
-    public void RemovePoints(float amount, int hitBy)
+    void StartSweatEffect()
     {
-        if(points != 0)
+        foreach (var ps in Sweat.GetComponentsInChildren<ParticleSystem>())
         {
-            points -= amount;
+            ps.Play();
+        }
+    }
+
+    IEnumerator RemovePoints(float amount)
+    {
+        float step = 0.01f;
+        while(amount > 0)
+        {
+            amount -= step;
+            points -= step;
             points = Mathf.Clamp01(points);
             if (points == 0)
                 cm.Die();
 
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+    }
+
+    public void RemovePoints(float amount, int hitBy)
+    {
+        if(points != 0)
+        {
+            StartCoroutine(RemovePoints(amount));
             if(hitBy == LayerMask.NameToLayer("TearyCharacter"))
             {
                 StartTearEffect();
             }
 
+            else if(hitBy == LayerMask.NameToLayer("SweatyCharacter"))
+            {
+                StartSweatEffect();
+            }
         }
         
     }

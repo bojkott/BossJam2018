@@ -33,7 +33,9 @@ public class OnionDamage : MonoBehaviour {
                     hitObjects.Add(other.gameObject.layer);
                 }
             }
-            other.gameObject.GetComponentInParent<Rigidbody>().AddExplosionForce(force, transform.position, transform.localScale.magnitude);
         }
+        Rigidbody rb = other.gameObject.GetComponentInParent<Rigidbody>();
+        if(rb)
+            rb.AddExplosionForce(force, transform.position, 10);
     }
 }

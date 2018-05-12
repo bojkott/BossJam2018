@@ -213,6 +213,46 @@ public class CharacterMovement : MonoBehaviour
         //
         facePlantM = 0.9f + Random.value * 0.4f;
     }
+    public void EnableRagDoll(float duration)
+    {
+        foreach (CharacterMaintainHeight h in otherMaintainHeight)
+        {
+            h.enabled = false;
+        }
+        foreach (CharacterUpright h in otherUprights)
+        {
+            h.enabled = false;
+        }
+
+        maintainHeight.enabled = false;
+        jumpCounter = 0;
+        jumpAnticipation = false;
+        inAir = true;
+        legs.enabled = false;
+        chestUpright.enabled = false;
+        faceDirection.enabled = false;
+
+        Invoke("DisableRagDoll", duration);
+    }
+    public void DisableRagDoll()
+    {
+        foreach (CharacterMaintainHeight h in otherMaintainHeight)
+        {
+            h.enabled = true;
+        }
+        foreach (CharacterUpright h in otherUprights)
+        {
+            h.enabled = true;
+        }
+
+        maintainHeight.enabled = true;
+        jumpCounter = 0;
+        jumpAnticipation = true;
+        inAir = true;
+        legs.enabled = true;
+        chestUpright.enabled = true;
+        faceDirection.enabled = true;
+    }
     //
     private void StartJumpAnticipation()
     {

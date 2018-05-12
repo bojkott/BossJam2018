@@ -768,7 +768,8 @@ namespace Es.InkPainter
 			else
 			{
 				Debug.LogWarning("Could not get the point on the surface.");
-				return PaintNearestTriangleSurface(brush, worldPos, materialSelector, renderCamera);
+                return false;
+				//return PaintNearestTriangleSurface(brush, worldPos, materialSelector, renderCamera);
 			}
 		}
 
