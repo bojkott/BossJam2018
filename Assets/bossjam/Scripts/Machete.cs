@@ -39,7 +39,7 @@ public class Machete : MonoBehaviour {
             Resource otherResource = collision.gameObject.GetComponentInParent<Resource>();
             if (!otherResource.IsDead())
             {
-                otherResource.RemovePoints(damage);
+                otherResource.RemovePoints(damage, gameObject.layer);
                 resource.AddPoints(damage);
                 particles.Play();
                 StartCooldown();

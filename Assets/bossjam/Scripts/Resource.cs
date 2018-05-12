@@ -6,6 +6,7 @@ public class Resource : MonoBehaviour {
     [SerializeField]
     private float points = 1.0f;
 
+    public GameObject Tears;
     CharacterMovement cm;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,15 @@ public class Resource : MonoBehaviour {
         points = Mathf.Clamp01(points);
     }
 
-    public void RemovePoints(float amount)
+    void StartTearEffect()
+    {
+       foreach(var ps in Tears.GetComponentsInChildren<ParticleSystem>())
+        {
+            ps.Play();
+        }
+    }
+
+    public void RemovePoints(float amount, int hitBy)
     {
         if(points != 0)
         {
@@ -35,6 +44,12 @@ public class Resource : MonoBehaviour {
             points = Mathf.Clamp01(points);
             if (points == 0)
                 cm.Die();
+
+            if(hitBy == LayerMask.NameToLayer("TearyCharacter"))
+            {
+                StartTearEffect();
+            }
+
         }
         
     }
