@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         //
-        if (input.PressFire())
+        if (input.Jump() && !inAir)
         {
             StartJumpAnticipation();
         }
@@ -158,6 +158,27 @@ public class CharacterMovement : MonoBehaviour
         // *** DO A SMALL HOP UPWARD TO START GETTING UP ***
         //
         chestBody.AddForceAtPosition((chestBody.transform.forward * -1 + Vector3.up) * 20, chestBody.transform.TransformPoint(Vector3.up * 0.2f), ForceMode.Impulse);
+    }
+    public void Die()
+    {
+        foreach (CharacterMaintainHeight h in otherMaintainHeight)
+        {
+            h.enabled = false;
+        }
+        foreach (CharacterUpright h in otherUprights)
+        {
+            h.enabled = false;
+        }
+
+        maintainHeight.enabled = false;
+        jumpCounter = 0;
+        jumpAnticipation = false;
+        inAir = true;
+        legs.enabled = false;
+        chestUpright.enabled = false;
+        faceDirection.enabled = false;
+
+        this.enabled = false;
     }
     private void Jump()
     {

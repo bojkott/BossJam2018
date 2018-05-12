@@ -50,7 +50,7 @@ public class CharacterInput : MonoBehaviour
     //
     public bool Jump()
     {
-        return (jump && !wasJump) || (up && !wasUp);
+        return (jump && !wasJump);
     }
     //
     public bool PressFire()
