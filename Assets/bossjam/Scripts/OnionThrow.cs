@@ -6,6 +6,7 @@ public class OnionThrow : MonoBehaviour {
     public OnionSpawner OnionSpawner;
     Animator attack;
     CharacterInput input;
+    CharacterMovement movement;
     float throwForce = 0;
     bool attacking = false;
     // Use this for initialization
@@ -13,6 +14,7 @@ public class OnionThrow : MonoBehaviour {
     {
         attack = GetComponent<Animator>();
         input = GetComponent<CharacterInput>();
+        movement = GetComponent<CharacterMovement>();
     }
 
     public void ThrowOnion()
@@ -24,6 +26,10 @@ public class OnionThrow : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (movement.IsInAir())
+        {
+            return;
+        }
 
         if(input.HoldFire() && !attacking)
         {
