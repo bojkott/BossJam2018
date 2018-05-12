@@ -4,34 +4,31 @@ using UnityEngine;
 
 public class Megaphone : MonoBehaviour {
 
-    public float force = 10;
+    public float force = 10f;
+    public float speed = 1.0f;
     public float damage = 0.1f;
     Resource resource;
-    public ParticleSystem particles;
     public LayerMask canAttack;
-    bool cooldown = false;
-    float cooldownTimer = 0.5f;
+
+    ParticleSystem ps;
     List<int> hitObjects = new List<int>();
     // Use this for initialization
     void Start () {
-        resource = GetComponentInParent<Resource>();
-
+        resource = GameObject.FindGameObjectWithTag("Sweaty").GetComponent<Resource>();
+        ps = GetComponent<ParticleSystem>();
+        Destroy(gameObject, 5);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+
+
+    // Update is called once per frame
+    void Update () {
+        Vector3 forward = transform.forward;
+        forward.y = 0;
+
+        transform.position += forward.normalized * speed;
+        
 	}
-
-    void ResetCooldown()
-    {
-        cooldown = false;
-    }
-    void StartCooldown()
-    {
-        cooldown = true;
-        Invoke("ResetCooldown", cooldownTimer);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -47,7 +44,7 @@ public class Megaphone : MonoBehaviour {
                     hitObjects.Add(other.gameObject.layer);
                 }
             }
-            other.gameObject.GetComponentInParent<Rigidbody>().AddExplosionForce(force, transform.position, transform.localScale.magnitude);
+            other.gameObject.GetComponentInParent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse);
         }
     }
 }

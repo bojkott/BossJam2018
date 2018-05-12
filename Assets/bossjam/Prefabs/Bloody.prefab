@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 198754176840251348}
   - component: {fileID: 199362896254089094}
   - component: {fileID: 114684113838985498}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Sweat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 198464783296226020}
   - component: {fileID: 199543289845901144}
   - component: {fileID: 114951085496370416}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Sweat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18611,7 +18611,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -23073,7 +23073,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

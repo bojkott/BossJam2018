@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4206600421354998}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: Sweat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 198707728113365020}
   - component: {fileID: 199870981937179466}
   - component: {fileID: 114215263370311684}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: Sweat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 20449333364961100}
   - component: {fileID: 124238621476866788}
   - component: {fileID: 81343590378270876}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: TearyGUICamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 198491561315276034}
   - component: {fileID: 199453645098374566}
   - component: {fileID: 114495474154374616}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: Sweat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7380,7 +7380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a9059b1c20e8e46a105c5c58b66352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerID: 0
+  controllerID: 1
 --- !u!114 &114466247206455112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13841,7 +13841,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -22834,7 +22834,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
