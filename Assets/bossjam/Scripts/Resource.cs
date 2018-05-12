@@ -31,10 +31,13 @@ public class Resource : MonoBehaviour {
 
     void StartTearEffect()
     {
-       foreach(var ps in Tears.GetComponentsInChildren<ParticleSystem>())
+        foreach(var ps in Tears.GetComponentsInChildren<ParticleSystem>())
         {
             ps.Play();
         }
+        AudioSource AS = Tears.GetComponent<AudioSource>();
+        if (!AS.isPlaying)
+            AS.Play();
     }
 
     void StartSweatEffect()
@@ -43,6 +46,9 @@ public class Resource : MonoBehaviour {
         {
             ps.Play();
         }
+        AudioSource AS = Sweat.GetComponent<AudioSource>();
+        if (!AS.isPlaying)
+            AS.Play();
     }
 
     IEnumerator RemovePoints(float amount)

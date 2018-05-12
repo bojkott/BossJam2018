@@ -801,6 +801,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 82857161499779818, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d48c4735d96ffca478000be332220b0d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b37825b7f5f69a24a9b833237d3b3db2, type: 2}
   m_IsPrefabParent: 0
@@ -11614,6 +11619,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82255559998369600, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d48c4735d96ffca478000be332220b0d, type: 3}
+    - target: {fileID: 82072502355414492, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ebeea404d3ac0a94b9a61d55c33d98a0, type: 3}
+    - target: {fileID: 82255559998369600, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 82072502355414492, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 0.86
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f, type: 2}
   m_IsPrefabParent: 0
@@ -11656,6 +11681,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82182645660752224, guid: a1dd8c300b54ec9479b55dade5ac73a2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ebeea404d3ac0a94b9a61d55c33d98a0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1dd8c300b54ec9479b55dade5ac73a2, type: 2}
   m_IsPrefabParent: 0
