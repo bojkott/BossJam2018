@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         //
-        if (input.PressFire())
+        if (input.Jump() && !inAir)
         {
             StartJumpAnticipation();
         }

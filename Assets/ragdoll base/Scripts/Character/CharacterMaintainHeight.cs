@@ -8,8 +8,10 @@ public class CharacterMaintainHeight : MonoBehaviour
     public float pullUpForce = 10;
     public float leadTime = 0.3f; // *** THIS IS USED TO SLOW DOWN WHEN APPROACHING THE DESIRED HEIGHT, INSTEAD OF OVERSHOOTING BACK AND FORTH **
     public Transform inRelationTo = null;
+    public Transform offset = null;
     //
     protected float groundHeight = 0;
+    RaycastHit groundHit;
     //
     void Start()
     {
@@ -21,19 +23,29 @@ public class CharacterMaintainHeight : MonoBehaviour
     {
         // ***** TRY HOLD A OBJECT AT A SPECIFIC HEIGHT (optionally in relation to another object) ***
         //
-        RaycastHit groundHit;
-        if (Physics.Raycast(new Ray(transform.position, Vector3.down), out groundHit, 100, 1 << LayerMask.NameToLayer("Ground")))
+        Vector3 pos = transform.position;
+        if (offset)
+            pos = offset.position;
+        if (Physics.Raycast(new Ray(pos, Vector3.down), out groundHit, 100, 1 << LayerMask.NameToLayer("Ground")))
         {
             groundHeight = groundHit.point.y;
+            
         }
+
         float diff = (groundHeight + desiredHeight) - (transform.position.y + rigidbody.velocity.y * leadTime);
         if (inRelationTo != null)
         {
             diff = inRelationTo.TransformPoint(Vector3.up * desiredHeight).y - (transform.position.y + rigidbody.velocity.y * leadTime);
         }
+        Debug.Log(groundHeight);
         float dist = Mathf.Abs(diff);
         float pullM = Mathf.Clamp01(dist / 0.3f);
         rigidbody.AddForce(new Vector3(0, Mathf.Sign(diff) * pullUpForce * pullM * Time.deltaTime, 0), ForceMode.Impulse);
 
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(groundHit.point, 0.2f);
     }
 }
