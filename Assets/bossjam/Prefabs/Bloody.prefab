@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 114457340262683632}
   - component: {fileID: 114297361550352906}
   - component: {fileID: 114189295692099100}
+  - component: {fileID: 95296189269583660}
+  - component: {fileID: 114013262559862912}
   m_Layer: 0
   m_Name: Bloody
   m_TagString: Untagged
@@ -120,6 +122,21 @@ GameObject:
   - component: {fileID: 114464961755902532}
   m_Layer: 0
   m_Name: Noodle Leg Left 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1131191716681194
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4529952803470482}
+  m_Layer: 0
+  m_Name: upright
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,6 +794,7 @@ Transform:
   m_Children:
   - {fileID: 4595412535168988}
   - {fileID: 4950588307285304}
+  - {fileID: 4529952803470482}
   m_Father: {fileID: 4176844245806900}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -885,6 +903,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4176844245806900}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4529952803470482
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131191716681194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.39, z: 1.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4258580841359758}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4558324841024718
 Transform:
@@ -1098,7 +1129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292866752135246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.66}
+  m_LocalPosition: {x: 1.506, y: 0.296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4258580841359758}
@@ -2681,6 +2712,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95296189269583660
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082353038214106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7411ef8407e30094488e9b0592ab5516, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114013262559862912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082353038214106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ac15d2000ec834fafa4d4ea0384bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114061930806174114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2712,6 +2772,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
+  offset: {fileID: 0}
 --- !u!114 &114189295692099100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2776,8 +2837,8 @@ MonoBehaviour:
   - {fileID: 54836280017527226}
   maintainHeightStanding: 1
   maintainHeightCrouching: 0.6
-  jumpDelay: 0.4
-  airTimeDelay: 2
+  jumpDelay: 0.1
+  airTimeDelay: 0.5
   jumpForce: 50
   jumpForwardForce: 15
   facePlantForce: 30
@@ -2796,6 +2857,7 @@ MonoBehaviour:
   pullUpForce: 300
   leadTime: 0.3
   inRelationTo: {fileID: 0}
+  offset: {fileID: 4529952803470482}
 --- !u!114 &114320493071449930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2838,6 +2900,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
+  offset: {fileID: 0}
 --- !u!114 &114578346545201402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2876,6 +2939,7 @@ MonoBehaviour:
   pullUpForce: 30
   leadTime: 0.3
   inRelationTo: {fileID: 4258580841359758}
+  offset: {fileID: 0}
 --- !u!114 &114739495258822718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2907,6 +2971,7 @@ MonoBehaviour:
   pullUpForce: 30
   leadTime: 0.3
   inRelationTo: {fileID: 4258580841359758}
+  offset: {fileID: 0}
 --- !u!114 &114801847289760170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2918,7 +2983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e454189a55182479ec2c0c3ff91a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 20
   minDiff: 0
   leadTime: 0
   target: {fileID: 4950588307285304}
@@ -3372,7 +3437,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -3386,7 +3451,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -3748,7 +3813,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -3762,7 +3827,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -3842,7 +3907,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -3856,7 +3921,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:

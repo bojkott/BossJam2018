@@ -476,6 +476,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1304481809557028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4623942897070810}
+  m_Layer: 0
+  m_Name: upright
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1309569946156866
 GameObject:
   m_ObjectHideFlags: 1
@@ -1833,6 +1848,7 @@ Transform:
   - {fileID: 4955958713956026}
   - {fileID: 4263306724637192}
   - {fileID: 4843152530846842}
+  - {fileID: 4623942897070810}
   m_Father: {fileID: 4547129340513286}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1916,6 +1932,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4547129340513286}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4623942897070810
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304481809557028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: 0.97}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4559922456215536}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4628263801141590
 Transform:
@@ -5557,6 +5586,7 @@ MonoBehaviour:
   pullUpForce: 30
   leadTime: 0.3
   inRelationTo: {fileID: 4559922456215536}
+  offset: {fileID: 0}
 --- !u!114 &114042212127328766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5607,6 +5637,7 @@ MonoBehaviour:
   pullUpForce: 30
   leadTime: 0.3
   inRelationTo: {fileID: 4559922456215536}
+  offset: {fileID: 0}
 --- !u!114 &114445810683301306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5634,6 +5665,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
+  offset: {fileID: 0}
 --- !u!114 &114497866766723698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5687,6 +5719,7 @@ MonoBehaviour:
   pullUpForce: 300
   leadTime: 0.3
   inRelationTo: {fileID: 0}
+  offset: {fileID: 4623942897070810}
 --- !u!114 &114706333972225024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5736,6 +5769,7 @@ MonoBehaviour:
   pullUpForce: 120
   leadTime: 0.2
   inRelationTo: {fileID: 0}
+  offset: {fileID: 0}
 --- !u!114 &114938579441399156
 MonoBehaviour:
   m_ObjectHideFlags: 1
