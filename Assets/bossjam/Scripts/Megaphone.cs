@@ -44,7 +44,10 @@ public class Megaphone : MonoBehaviour {
                     hitObjects.Add(other.gameObject.layer);
                 }
             }
-            other.gameObject.GetComponentInParent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse);
+            
         }
+        Rigidbody rb = other.gameObject.GetComponentInParent<Rigidbody>();
+        if(rb)
+            rb.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 }

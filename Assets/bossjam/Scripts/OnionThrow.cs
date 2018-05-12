@@ -6,7 +6,8 @@ public class OnionThrow : MonoBehaviour {
     public OnionSpawner OnionSpawner;
     Animator attack;
     CharacterInput input;
-    
+    float throwForce = 0;
+    bool attacking = false;
     // Use this for initialization
     void Start()
     {
@@ -16,23 +17,36 @@ public class OnionThrow : MonoBehaviour {
 
     public void ThrowOnion()
     {
-        OnionSpawner.Spawn();
+        Debug.Log(throwForce);
+        OnionSpawner.Spawn(throwForce * 3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (input.PressFire())
-        {
-            attack.SetTrigger("attack");
-            
-            Invoke("resetAttack", 1);
 
+        if(input.HoldFire() && !attacking)
+        {
+            attack.SetTrigger("charge");
+            throwForce += Time.deltaTime;
+        }
+
+        if (input.ReleaseFire() && !attacking)
+        {
+            attack.ResetTrigger("charge");
+            attack.SetTrigger("attack");
+            Invoke("ThrowOnion", 0.25f);
+            Invoke("resetAttack", 1);
+            attacking = true;
+            
         }
     }
 
     void resetAttack()
     {
+        throwForce = 0;
+        
         attack.ResetTrigger("attack");
+        attacking = false;
     }
 }
