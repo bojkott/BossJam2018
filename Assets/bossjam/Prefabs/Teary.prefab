@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 54604514470577584}
   - component: {fileID: 153365610589672696}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 153904341766795306}
   - component: {fileID: 114062423482914010}
   m_Layer: 0
-  m_Name: Noodle Arm Left Hand
+  m_Name: Noodle Arm Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 153124812039981680}
   - component: {fileID: 114872043828926802}
   m_Layer: 0
-  m_Name: Noodle Arm Right Hand
+  m_Name: Noodle Arm Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 54221134778902274}
   - component: {fileID: 153270915343448026}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 54783685754026062}
   - component: {fileID: 153051082037151424}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 54532331488633566}
   - component: {fileID: 153613721185672116}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 54073309303613730}
   - component: {fileID: 153575030418445352}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,7 +1344,7 @@ GameObject:
   - component: {fileID: 54559176200166108}
   - component: {fileID: 153073599241156666}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6841,7 +6841,7 @@ MonoBehaviour:
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
-    brushColor: {r: 0.52156866, g: 0.6901961, b: 0.8980393, a: 1}
+    brushColor: {r: 0.52156866, g: 0.6901961, b: 0.8980393, a: 0.39215687}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
@@ -6879,7 +6879,7 @@ MonoBehaviour:
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
-    brushColor: {r: 0.52156866, g: 0.6901961, b: 0.8980393, a: 1}
+    brushColor: {r: 0.52156866, g: 0.6901961, b: 0.8980393, a: 0.39215687}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
@@ -7374,7 +7374,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -7468,7 +7468,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -7656,7 +7656,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -7844,7 +7844,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -8032,7 +8032,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -8220,7 +8220,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:

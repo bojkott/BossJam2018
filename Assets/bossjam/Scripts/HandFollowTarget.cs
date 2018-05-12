@@ -23,10 +23,13 @@ public class HandFollowTarget : MonoBehaviour {
     {
 
         Vector3 diff = target.position - transform.position + rigidbody.velocity*leadTime;
- 
+
+        diff.y *= -Physics.gravity.y;
         if(diff.magnitude > minDiff)
         {
-            rigidbody.AddForce(diff * force * Time.deltaTime, ForceMode.Impulse);
+            float dist = diff.magnitude;
+            float pullM = Mathf.Clamp01(dist / 0.3f);
+            rigidbody.AddForce(pullM * force * Time.deltaTime * diff, ForceMode.Impulse);
         }
 
     }

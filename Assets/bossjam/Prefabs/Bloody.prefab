@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 54620866324520568}
   - component: {fileID: 153265457593029636}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 54916614842865098}
   - component: {fileID: 153170674744868148}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 54129165070996336}
   - component: {fileID: 153275934811483208}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 54637163605127566}
   - component: {fileID: 153647674044666104}
   m_Layer: 0
-  m_Name: Noodle Arm Left
+  m_Name: Noodle Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 54009923034714450}
   - component: {fileID: 153307043508404444}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 54026807530477924}
   - component: {fileID: 153145609879852884}
   m_Layer: 0
-  m_Name: Noodle Arm Right
+  m_Name: Noodle Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,7 +1098,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292866752135246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4258580841359758}
@@ -2857,7 +2857,7 @@ MonoBehaviour:
     rotateAngle: 0
     brushNormalBlend: 0
     brushHeightBlend: 0
-    brushColor: {r: 1, g: 0, b: 0, a: 1}
+    brushColor: {r: 1, g: 0, b: 0, a: 0.49019608}
     colorBlendType: 0
     normalBlendType: 0
     heightBlendType: 0
@@ -2920,7 +2920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 10
   minDiff: 0
-  leadTime: 0.3
+  leadTime: 0
   target: {fileID: 4950588307285304}
 --- !u!114 &114819267667249270
 MonoBehaviour:
@@ -3458,7 +3458,7 @@ ConfigurableJoint:
   m_GameObject: {fileID: 1097160188389910}
   m_ConnectedBody: {fileID: 54242114598589136}
   m_Anchor: {x: 0, y: -0.5, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.4594273, y: 0.29914764, z: 0}
   serializedVersion: 2
@@ -3466,7 +3466,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -3480,7 +3480,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -3654,7 +3654,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -3668,7 +3668,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
@@ -4218,7 +4218,7 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 1
   m_AngularZMotion: 1
   m_LinearLimitSpring:
@@ -4232,7 +4232,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 0
+    limit: -50
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
