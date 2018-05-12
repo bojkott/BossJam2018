@@ -37,7 +37,6 @@ public class CharacterMaintainHeight : MonoBehaviour
         {
             diff = inRelationTo.TransformPoint(Vector3.up * desiredHeight).y - (transform.position.y + rigidbody.velocity.y * leadTime);
         }
-        Debug.Log(groundHeight);
         float dist = Mathf.Abs(diff);
         float pullM = Mathf.Clamp01(dist / 0.3f);
         rigidbody.AddForce(new Vector3(0, Mathf.Sign(diff) * pullUpForce * pullM * Time.deltaTime, 0), ForceMode.Impulse);
