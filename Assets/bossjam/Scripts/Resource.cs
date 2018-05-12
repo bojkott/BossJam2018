@@ -5,7 +5,7 @@ using UnityEngine;
 public class Resource : MonoBehaviour {
     [SerializeField]
     public float points = 1.0f;
-
+    public float tick = 0.02f;
     public GameObject Tears;
     public GameObject Sweat;
     CharacterMovement cm;
@@ -16,8 +16,11 @@ public class Resource : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        points -= tick * Time.deltaTime;
+        points = Mathf.Clamp01(points);
+        if (points == 0)
+            cm.Die();
+    }
     public bool IsDead()
     {
         return points == 0;
@@ -25,8 +28,7 @@ public class Resource : MonoBehaviour {
 
     public void AddPoints(float amount)
     {
-        points += amount;
-        points = Mathf.Clamp01(points);
+        StartCoroutine("AddPointsOverTime", amount);
     }
 
     void StartTearEffect()
@@ -45,16 +47,14 @@ public class Resource : MonoBehaviour {
         }
     }
 
-    IEnumerator RemovePoints(float amount)
+    IEnumerator AddPointsOverTime(float amount)
     {
         float step = 0.01f;
-        while(amount > 0)
+        while(amount > 0 && points != 1.0f)
         {
             amount -= step;
-            points -= step;
+            points += step;
             points = Mathf.Clamp01(points);
-            if (points == 0)
-                cm.Die();
 
             yield return new WaitForSecondsRealtime(0.05f);
         }
@@ -64,7 +64,7 @@ public class Resource : MonoBehaviour {
     {
         if(points != 0)
         {
-            StartCoroutine(RemovePoints(amount));
+            //StartCoroutine(RemovePoints(amount));
             if(hitBy == LayerMask.NameToLayer("TearyCharacter"))
             {
                 StartTearEffect();

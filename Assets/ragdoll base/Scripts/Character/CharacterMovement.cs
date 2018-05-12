@@ -39,6 +39,7 @@ public class CharacterMovement : MonoBehaviour
     //
     void Update()
     {
+
         //
         if (input.Jump() && !inAir)
         {

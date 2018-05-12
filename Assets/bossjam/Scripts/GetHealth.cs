@@ -9,12 +9,12 @@ public class GetHealth : MonoBehaviour {
     Text text;
 	// Use this for initialization
 	void Start () {
-        target = GameObject.Find(targetTag).GetComponent<Resource>();
         text = GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
+        target = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Resource>();
         text.text = ((int)(target.points * 100)).ToString() + "%";
 	}
 }
