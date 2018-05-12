@@ -75,7 +75,10 @@ public class PitLaunch : MonoBehaviour {
             Rigidbody chestRigidbody = gameObject.GetComponent<Rigidbody>();
 
             // Apply force to chest
-            gameObject.transform.parent.gameObject.GetComponent<CharacterMovement>().EnableRagDoll(0.2f);
+            CharacterMovement movement = gameObject.transform.parent.gameObject.GetComponent<CharacterMovement>();
+            movement.EnableRagDoll(0.2f);
+            movement.SetIsInAir();
+
             Vector3 force;
             force.x = 0;
             force.y = 200;

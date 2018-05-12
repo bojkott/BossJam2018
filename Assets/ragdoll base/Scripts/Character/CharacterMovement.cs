@@ -23,7 +23,7 @@ public class CharacterMovement : MonoBehaviour
     //
     protected float jumpCounter = 0;
     public float jumpDelay = 0.4f;
-    public float airTimeDelay = 2;
+    public float airTimeDelay = 4;
     protected bool jumpAnticipation = false;
     protected bool inAir = false;
     public float jumpForce = 100;
@@ -39,6 +39,7 @@ public class CharacterMovement : MonoBehaviour
     //
     void Update()
     {
+
         //
         if (input.Jump() && !inAir)
         {
@@ -252,6 +253,14 @@ public class CharacterMovement : MonoBehaviour
         legs.enabled = true;
         chestUpright.enabled = true;
         faceDirection.enabled = true;
+    }
+    public bool IsInAir()
+    {
+        return inAir;
+    }
+    public void SetIsInAir()
+    {
+        inAir = true;
     }
     //
     private void StartJumpAnticipation()
