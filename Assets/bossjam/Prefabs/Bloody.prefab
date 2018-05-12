@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 1
   Tears: {fileID: 1109603854385106}
-  Sweat: {fileID: 0}
+  Sweat: {fileID: 1014468719061504}
 --- !u!114 &114181317396562690
 MonoBehaviour:
   m_ObjectHideFlags: 1
