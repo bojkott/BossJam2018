@@ -1693,7 +1693,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602013555826696}
   m_LocalRotation: {x: -0, y: 0.8111645, z: -0, w: 0.58481807}
-  m_LocalPosition: {x: -6.4, y: 3.06, z: -5.741}
+  m_LocalPosition: {x: 1.1410341, y: 0.0025433898, z: -0.30613273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4874572365037734}
@@ -5980,7 +5980,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ffa3ff52f09147e4eb85f3528e7f2ecb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.375
+  m_Volume: 0.125
   m_Pitch: 0.89
   Loop: 0
   Mute: 0
@@ -6075,7 +6075,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f018b6770774f1647ab33e41ff1b43e2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.693
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6798,7 +6798,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -6892,7 +6892,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -6986,7 +6986,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7080,7 +7080,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7174,7 +7174,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7268,7 +7268,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7362,7 +7362,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7456,7 +7456,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7550,7 +7550,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7644,7 +7644,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7738,7 +7738,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7832,7 +7832,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -7926,7 +7926,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -8020,7 +8020,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -8114,7 +8114,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -8208,7 +8208,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
