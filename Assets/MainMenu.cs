@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour {
 
     IEnumerator Countdown()
     {
+        GetComponent<AudioSource>().volume /= 2;
         yield return new WaitForSecondsRealtime(1.0f);
         countdown1.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
