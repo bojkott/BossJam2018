@@ -4014,7 +4014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 1
-  tick: 0.02
+  tick: 0.05
   Tears: {fileID: 1109603854385106}
   Sweat: {fileID: 1014468719061504}
 --- !u!114 &114181317396562690
@@ -4370,7 +4370,6 @@ MonoBehaviour:
   maintainHeight: {fileID: 114889449450284652}
   otherMaintainHeight:
   - {fileID: 114336687108739054}
-  - {fileID: 0}
   otherUprights:
   - {fileID: 114793164080097168}
   - {fileID: 114603889129857658}
