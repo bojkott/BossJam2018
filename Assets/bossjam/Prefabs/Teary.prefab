@@ -7621,7 +7621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 1
-  tick: 0.05
+  tick: 0.02
   Tears: {fileID: 0}
   Sweat: {fileID: 1007824913721794}
 --- !u!114 &114753729038447130
