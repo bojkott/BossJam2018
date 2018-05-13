@@ -5731,7 +5731,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5854,6 +5854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1602013555826696, guid: b37825b7f5f69a24a9b833237d3b3db2, type: 2}
+  controllerId: 1
 --- !u!1 &982593839
 GameObject:
   m_ObjectHideFlags: 0
@@ -9333,6 +9334,29 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1448035759 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1093039952243788, guid: 25d98f67206d615489947b23cf0474d4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1454627439}
+--- !u!114 &1448035766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1448035759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04cc1b9412eea6e4a8798f4b2f88b4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintSet:
+  - mainTextureName: _MainTex
+    normalTextureName: _BumpMap
+    heightTextureName: _ParallaxMap
+    useMainPaint: 1
+    useNormalPaint: 0
+    useHeightPaint: 0
 --- !u!1001 &1454627439
 Prefab:
   m_ObjectHideFlags: 0
@@ -12995,6 +13019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1885176350829490, guid: a1dd8c300b54ec9479b55dade5ac73a2, type: 2}
+  controllerId: 2
 --- !u!1 &2040712842
 GameObject:
   m_ObjectHideFlags: 0
@@ -13036,6 +13061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1200337206750652, guid: 90ae4cb733e29fc4db0e81fb1fb59d7f, type: 2}
+  controllerId: 0
 --- !u!1 &2053984361
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour {
 
     private GameObject target;
     public GameObject prefab;
+    public int controllerId = 0;
     // Use this for initialization
     void Start () {
         target = Instantiate(prefab, transform.position, prefab.transform.rotation);
@@ -13,7 +14,7 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetButtonDown("Back_" + (controllerId+1).ToString()))
         {
             Spawn();
         }
