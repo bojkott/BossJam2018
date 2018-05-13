@@ -262,7 +262,6 @@ GameObject:
   - component: {fileID: 23158507822242134}
   - component: {fileID: 54962871111254460}
   - component: {fileID: 153943464563488272}
-  - component: {fileID: 114413711876751206}
   m_Layer: 14
   m_Name: Noodle Arm Left Hand
   m_TagString: Untagged
@@ -7170,7 +7169,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a42dddf80e72280479399a2874f37bd6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.182
+  m_Volume: 0.1
   m_Pitch: 1.2
   Loop: 0
   Mute: 0
@@ -7355,7 +7354,7 @@ MonoBehaviour:
   maintainHeight: {fileID: 114923897167286656}
   otherMaintainHeight:
   - {fileID: 114298025148524076}
-  - {fileID: 114413711876751206}
+  - {fileID: 0}
   otherUprights:
   - {fileID: 114317039991347118}
   - {fileID: 114076324489941662}
@@ -7476,22 +7475,6 @@ MonoBehaviour:
   leadTime: 0.2
   inRelationTo: {fileID: 0}
   offset: {fileID: 4425538504727848}
---- !u!114 &114413711876751206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1127179989572568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6446524a012c9d644ae045dc51d8b618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredHeight: 0.2
-  pullUpForce: 30
-  leadTime: 0.3
-  inRelationTo: {fileID: 4422068305545294}
-  offset: {fileID: 0}
 --- !u!114 &114442311734133366
 MonoBehaviour:
   m_ObjectHideFlags: 1

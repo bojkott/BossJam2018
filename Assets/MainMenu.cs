@@ -23,13 +23,14 @@ public class MainMenu : MonoBehaviour {
 
     IEnumerator Countdown()
     {
+        GetComponent<AudioSource>().volume /= 2;
         yield return new WaitForSecondsRealtime(1.0f);
         countdown1.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
         countdown2.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
         countdown3.SetActive(true);
-        yield return new WaitForSecondsRealtime(3.0f);
+        yield return new WaitForSecondsRealtime(2.5f);
         SceneManager.LoadScene(1);
     }
 	
@@ -66,7 +67,10 @@ public class MainMenu : MonoBehaviour {
             
 
         if (Input.GetKeyDown(KeyCode.Space))
-            SceneManager.LoadScene(1);
+        {
+            starting = true;
+            StartCoroutine(Countdown());
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 	}

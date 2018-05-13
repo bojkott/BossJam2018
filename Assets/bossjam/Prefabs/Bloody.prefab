@@ -353,7 +353,6 @@ GameObject:
   - component: {fileID: 23902293489654546}
   - component: {fileID: 54465435484660230}
   - component: {fileID: 153072724952407930}
-  - component: {fileID: 114674045252461482}
   m_Layer: 13
   m_Name: Noodle Arm Left Hand
   m_TagString: Untagged
@@ -3593,7 +3592,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6111b071c87988c468aea33f8b77fbce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3783,7 +3782,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a42dddf80e72280479399a2874f37bd6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.183
+  m_Volume: 0.1
   m_Pitch: 0.86
   Loop: 0
   Mute: 0
@@ -4267,22 +4266,6 @@ MonoBehaviour:
   inFrontVelocityM: 0.8
   chestBendDownForce: 0
   walking: 0
---- !u!114 &114674045252461482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1241916258787538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6446524a012c9d644ae045dc51d8b618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredHeight: 0.2
-  pullUpForce: 30
-  leadTime: 0.3
-  inRelationTo: {fileID: 4277686640155554}
-  offset: {fileID: 0}
 --- !u!114 &114684113838985498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4387,7 +4370,7 @@ MonoBehaviour:
   maintainHeight: {fileID: 114889449450284652}
   otherMaintainHeight:
   - {fileID: 114336687108739054}
-  - {fileID: 114674045252461482}
+  - {fileID: 0}
   otherUprights:
   - {fileID: 114793164080097168}
   - {fileID: 114603889129857658}
@@ -19740,7 +19723,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.8941177, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20812,7 +20795,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -46416,8 +46399,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3037e5088d573b34b91f5e601b476ff5, type: 2}
-  - {fileID: 2100000, guid: 3037e5088d573b34b91f5e601b476ff5, type: 2}
+  - {fileID: 2100000, guid: 896e51b34d1ada54299454cfc7243dda, type: 2}
+  - {fileID: 2100000, guid: 896e51b34d1ada54299454cfc7243dda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
