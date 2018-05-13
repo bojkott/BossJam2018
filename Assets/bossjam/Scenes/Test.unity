@@ -801,6 +801,86 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 153933914970560666, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153338479820060464, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153119256441856656, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153608913426653292, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153069220541350408, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153280815539739356, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153414413394537264, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153955060407489856, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153571404288783802, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153165464402938760, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153342354659645472, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153059330824406350, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153663476103877432, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153142711811056376, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153816984476994716, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 153775762778586332, guid: b37825b7f5f69a24a9b833237d3b3db2,
+        type: 2}
+      propertyPath: m_LinearLimit.limit
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b37825b7f5f69a24a9b833237d3b3db2, type: 2}
   m_IsPrefabParent: 0
