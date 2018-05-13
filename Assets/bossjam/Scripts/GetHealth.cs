@@ -15,6 +15,14 @@ public class GetHealth : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
         target = GameObject.FindGameObjectWithTag(targetTag).GetComponent<Resource>();
-        text.text = ((int)(target.points * 100)).ToString() + "%";
+        if (text)
+            text.text = ((int)(target.points * 100)).ToString() + "%";
+        else
+        {
+            transform.localScale = new Vector3(target.points, 1, 1);
+            if (target.points == 0)
+                Destroy(gameObject);
+        }
+
 	}
 }
