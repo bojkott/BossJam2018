@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4206600421354998}
+  - component: {fileID: 82843206308439704}
   m_Layer: 14
   m_Name: Sweat
   m_TagString: Untagged
@@ -1442,22 +1443,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1783892625473196
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4070484379380222}
-  - component: {fileID: 82021249153149026}
-  m_Layer: 14
-  m_Name: Audio Source
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1812610142077804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,19 +1829,6 @@ Transform:
   m_Father: {fileID: 4355638654421204}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4070484379380222
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1783892625473196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4206600421354998}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4077639708005622
 Transform:
   m_ObjectHideFlags: 1
@@ -2078,7 +2050,6 @@ Transform:
   m_Children:
   - {fileID: 4135344320143152}
   - {fileID: 4050426993922520}
-  - {fileID: 4070484379380222}
   m_Father: {fileID: 4422068305545294}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7188,19 +7159,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82021249153149026
+--- !u!82 &82843206308439704
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1783892625473196}
+  m_GameObject: {fileID: 1007824913721794}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ebeea404d3ac0a94b9a61d55c33d98a0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a42dddf80e72280479399a2874f37bd6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0

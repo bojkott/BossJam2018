@@ -25,6 +25,7 @@ public class SweatyAttack : MonoBehaviour {
         {
             attack.SetTrigger("attack");
             Invoke("resetAttack", 1);
+            
         }
 	}
 

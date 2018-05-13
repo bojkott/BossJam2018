@@ -37,7 +37,7 @@ public class Resource : MonoBehaviour {
         {
             ps.Play();
         }
-        AudioSource AS = Tears.GetComponentInChildren<AudioSource>();
+        AudioSource AS = Tears.GetComponent<AudioSource>();
         if (!AS.isPlaying)
             AS.Play();
     }
@@ -48,7 +48,7 @@ public class Resource : MonoBehaviour {
         {
             ps.Play();
         }
-        AudioSource AS = Sweat.GetComponentInChildren<AudioSource>();
+        AudioSource AS = Sweat.GetComponent<AudioSource>();
         if (!AS.isPlaying)
             AS.Play();
     }

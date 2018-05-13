@@ -24,15 +24,12 @@ public class BloodyAttack : MonoBehaviour {
         {
             attack.SetTrigger("attack");
             Invoke("resetAttack", 1);
-
-            AudioSource[] AS = gameObject.GetComponentsInChildren<AudioSource>();
+            AudioSource AS = gameObject.GetComponent<AudioSource>();
+            
             if (AS != null)
             {
-                foreach (var a in AS)
-                {
-                    if (!a.isPlaying && a.name == "Audio Source (Swing)")
-                        a.Play();
-                }
+                if (!AS.isPlaying)
+                    AS.Play();
             }
         }
 	}
